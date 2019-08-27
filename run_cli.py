@@ -14,7 +14,7 @@ def main():
             year = int(input('Type a year: '))
             break
         except ValueError:
-            print('Invalid Value. Try again.')
+            print('Invalid Value. Try it again.')
     
     print(f'{year}: {"Leap Year" if is_leap_year(year) else "Not a Leap Year"}')
 
