@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-br">
 <head>
 	<title>Ano Bissexto</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
-	<div>
-		<form>
-			<label>Ano:</label>
-			<input type="year" name="">
-		</form>
-	</div>
-
+	<section>
+		<div>
+			<form method="POST">
+				<label>Ano:</label>
+				<input type="number" name="year" id="year" min="1582">
+				<input type="submit" name="submit" id="submit" value="Verificar">
+			</form>
+			{% if result %}
+				<p>{{ result }}</p>
+			{% endif%}
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
 </body>
 </html>
