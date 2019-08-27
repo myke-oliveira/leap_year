@@ -12,10 +12,9 @@ app = Flask(__name__)
 
 @app.route('/', methods = ['POST', 'GET'])
 def index(result=None):
-    print(request.method)
     if request.method == 'POST':
         year = int(request.form['year'])
-        result = f'{year}: {"Leap Year" if is_leap_year(year) else "Not a Leap Year"}'
+        result = f'{year}: {"Ano Bissexto" if is_leap_year(year) else "Ano Não-Bissexto"}'
     return render_template('index.html', result=result)
 
 if __name__ == '__main__':
